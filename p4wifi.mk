@@ -21,13 +21,6 @@ $(call inherit-product, device/samsung/p4-common/p4-common.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/p4wifi/p4wifi-vendor.mk)
 
-# Added by djmatt604 - inherit AOKP stuff
-$(call inherit-product-if-exists, vendor/aokp/configs/common.mk)
-
-$(call inherit-product-if-exists, vendor/aokp/configs/common-tablet.mk)
-
-$(call inherit-product-if-exists, vendor/aokp.configs/common-versions.mk)
-
 # Cameradata
 PRODUCT_COPY_FILES += \
     device/samsung/p4-common/camera/cameradata/back_camera_test_pattern.yuv:system/cameradata/back_camera_test_pattern.yuv \
@@ -57,6 +50,3 @@ PRODUCT_MODEL := p4wifi
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 
-# Added by djmatt604 - install AOKP boot animation
-PRODUCT_COPY_FILES += \
-vendor/aokp/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
